@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PulseTrack Web Forms</title>
+</head>
+<body>
+
+  <h1>PulseTrack - Wearable Health Solutions</h1>
+  <p>Smart wearable devices for real-time health and fitness tracking.</p>
+
+  <!-- FORM 1 -->
+  <form action="/order-submit" method="POST">
+    <h2>1. Smartwatch Pre-Order</h2>
+
+    <label for="fname">First Name:</label><br>
+    <input type="text" id="fname" name="firstName" placeholder="John" maxlength="20" size="20" required><br><br>
+
+    <label for="model">Select Model:</label><br>
+    <select id="model" name="watchModel">
+      <option value="pro">PulseTrack Pro</option>
+      <option value="lite">PulseTrack Lite</option>
+    </select><br><br>
+
+    <label>Band Style:</label><br>
+    <input type="radio" id="b1" name="band" value="Silicone">
+    <label for="b1">Silicone</label>
+    <input type="radio" id="b2" name="band" value="Leather">
+    <label for="b2">Leather</label><br><br>
+
+    <label>Features:</label><br>
+    <input type="checkbox" id="c1" name="features" value="GPS">
+    <label for="c1">GPS</label>
+    <input type="checkbox" id="c2" name="features" value="HeartRate">
+    <label for="c2">Heart Rate Monitor</label><br><br>
+
+    <input type="submit" value="Submit Order">
+    <input type="reset" value="Clear">
+  </form>
+
+  <hr>
+
+  <!-- FORM 2-->
+  <form action="/setup-submit" method="POST">
+    <h2>2. Device Setup & Registration</h2>
+
+    <label for="dev_id">Device Serial ID:</label><br>
+    <input type="text" id="dev_id" name="deviceId" value="PT-2026-X" readonly><br><br>
+
+    <label for="pass">Account Password:</label><br>
+    <input type="password" id="pass" name="userPassword" maxlength="15" required><br><br>
+
+    <label for="age">User Age (18 to 60):</label><br>
+    <input type="number" id="age" name="userAge" min="18" max="60" required><br><br>
+
+    <label for="sdate">Setup Date:</label><br>
+    <input type="date" id="sdate" name="setupDate" min="2026-01-01" max="2026-12-31"><br><br>
+
+    <label for="stime">Daily Sync Time:</label><br>
+    <input type="time" id="stime" name="syncTime"><br><br>
+
+    <input type="submit" value="Register Device">
+    <input type="reset" value="Clear">
+  </form>
+
+  <hr>
+
+  <!-- FORM 3-->
+  <form action="/support-submit" method="POST">
+    <h2>3. Customer Support & Feedback</h2>
+
+    <label for="file_up">Upload File/Receipt:</label><br>
+    <input type="file" id="file_up" name="userFile"><br><br>
+
+    <label for="msg">Message / Feedback:</label><br>
+    <textarea id="msg" name="feedbackMsg" rows="4" cols="30" placeholder="Type here..."></textarea><br><br>
+
+    <input type="submit" value="Send Feedback">
+    <input type="reset" value="Clear">
+    <button type="button" onclick="alert('Help button clicked!')">General Action</button>
+  </form>
+
+</body>
+</html>
